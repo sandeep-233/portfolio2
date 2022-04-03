@@ -1,0 +1,484 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    /* flex-direction: row; */
+    /* justify-content: center; */
+    align-items: center;
+    height: 100vh;
+    background: url(/2126.jpg) no-repeat;
+    background-size: cover;
+    color: aliceblue;
+    font-size: x-large;
+}
+.container .left-box{
+    background: linear-gradient(to right, #42275a94, #734b6dd1);
+    /* border: 1px solid; */
+    width: 29%;
+    margin-right: 18px;
+    display: flex;
+    height: 99vh;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+.container .left-box .imgbox {
+    border: 3px solid darkslateblue;
+    border-radius: 9px 9px 9px 77px;
+    background: transparent;
+}
+.container .left-box .imgbox img {
+    width: 118px;
+}
+.container .left-box .next-pages-buttons ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.container .left-box .next-pages-buttons ul li {
+    margin: 24px 0px;
+}
+.container .left-box .next-pages-buttons ul li button {
+    background: transparent;
+    border: none;
+}
+.container .left-box .next-pages-buttons ul li button :hover {
+    border: 1px solid red;
+    border-radius: 9px;
+    border-left: none;
+    border-right: none;
+    padding: 3px 6px;
+    font-size: larger;
+    border-radius: 9px;
+}
+.container .left-box .next-pages-buttons ul li button a {
+    /* color: darkviolet; */
+    color: snow;
+    font-size: large;
+    font-weight: bold;
+    /* font-family: 'Comfortaa', cursive; */
+    /* font-family: 'Dancing Script', cursive; */
+    font-family: 'Varela Round', sans-serif;
+    text-decoration: none;
+}
+.container .left-box .next-pages-buttons ul li ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.container .left-box .next-pages-buttons ul li ul li {
+    margin: 0px 24px;
+    cursor: pointer;
+}
+.container .left-box .next-pages-buttons ul li ul li img {
+    width: 34px;
+}
+
+.container  .right-box  {
+    width: 68%;
+    /* border: 1px solid; */
+    height: 99vh;
+    /* display: flex; */
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    overflow: scroll;
+    float: right;
+}
+
+/* project containts */
+.container  .right-box .projectsContaints {
+    width: 98%;
+    position: relative;
+    /* border: 1px solid; */
+    /* height: 99vh; */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto auto auto;
+    grid-gap: 9px;
+    padding: 9px;
+}
+.container  .right-box .projectsContaints .project-title {
+    position: absolute;
+    top: 252px;
+    right: 382px;
+    font-weight: bold;
+    /* font-family: 'Comfortaa', cursive; */
+    /* font-family: 'Dancing Script', cursive; */
+    font-family: 'Varela Round', sans-serif;
+}
+.container  .right-box .projectsContaints .project {
+    /* border: 2px solid; */
+    width: 90%;
+    height: 84%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    position: relative;
+
+}
+.container  .right-box .projectsContaints .project img {
+    width: 98%;
+    height: 90%;
+    border: 1px solid;
+    border-radius: 9px;
+}
+.container  .right-box .projectsContaints .project .subtitle {
+    width: 75%;
+    /* height: 75%; */
+    border: 1px solid;
+    font-size: medium;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    visibility: hidden;
+    position: absolute;
+    border-radius: 9px;
+    background: #111111b3;
+    font-weight: bold;
+    /* font-family: 'Comfortaa', cursive; */
+    /* font-family: 'Dancing Script', cursive; */
+    font-family: 'Varela Round', sans-serif;
+
+}
+.container .right-box .projectsContaints .project:hover .subtitle {
+    visibility: visible;
+}
+
+.border {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.border::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid rgb(255,11,222);
+    border-top:3px solid rgb(255,11,222);
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: .5s;
+    transform: scale(1,0);
+    /* z-index: 2; */
+}
+.project:hover .border::before{
+    transform: scale(1,1);
+}
+.border::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-right: 3px solid rgb(255,11,222);
+    border-left: 3px solid rgb(255,11,222);
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: .5s;
+    transform: scale(1,0);
+    /* z-index: 2; */
+}
+.project:hover .border::after{
+    transform: scale(1,1);
+}
+
+hr{
+    width: 100%;
+    border: 1px solid rgb(255,11,222);
+    /* background: linear-gradient(transparent,rgb(255,11,222)); */
+    border-radius: 9px;
+}
+
+/* Resume... */
+.container  .right-box .resume {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 0px;
+    font-weight: bold;
+    /* font-family: 'Comfortaa', cursive; */
+    /* font-family: 'Dancing Script', cursive; */
+    font-family: 'Varela Round', sans-serif;
+}
+.container .right-box .resume .experiance-downloadButton {
+    width: 99%;
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0px;
+    padding: 0px 12px;
+    align-items: center;
+}
+.container .right-box .resume .experiance-downloadButton button {
+    cursor: pointer;
+    padding: 3px;
+    border: 1px solid;
+    border-radius: 4px;
+    background: #951599;
+    color: white;
+}
+.container .right-box .resume .experiance-downloadButton button:hover {
+    background: transparent;
+}
+.container .right-box .resume .exprience-contant {
+    background: black;
+    border: 2px solid;
+    border-radius: 12px;
+    padding: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-weight: bold;
+    /* font-family: 'Comfortaa', cursive; */
+    /* font-family: 'Dancing Script', cursive; */
+    font-family: 'Varela Round', sans-serif;
+}
+.container .right-box .resume .exprience-contant .left-containt {
+    width: 40%;
+    height: 94%;
+    font-size: large;
+}
+.container .right-box .resume .exprience-contant .right-containt {
+    width: 50%;
+    height: 100%;
+    font-size: large;
+}
+.container .right-box .resume .education-Title {
+    width: 100%;
+    margin: 12px 0px;
+    font-weight: bold;
+    /* font-family: 'Comfortaa', cursive; */
+    /* font-family: 'Dancing Script', cursive; */
+    font-family: 'Varela Round', sans-serif;
+}
+.container .right-box .resume .education-containt {
+    border: 2px solid;
+    border-radius: 9px;
+    width: 100%;
+    font-size: large;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+    font-weight: bold;
+    /* font-family: 'Comfortaa', cursive; */
+    /* font-family: 'Dancing Script', cursive; */
+    font-family: 'Varela Round', sans-serif;
+}
+.container .right-box .resume .education-containt .left-containt {
+    width: 40%;
+    height: 94%;
+    font-size: large;
+}
+.container .right-box .resume .education-containt .right-containt {
+    width: 50%;
+    height: 100%;
+    font-size: large;
+}
+.container .right-box .resume .skills {
+    width: 100%;
+    margin: 12px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    font-weight: bold;
+    /* font-family: 'Comfortaa', cursive; */
+    /* font-family: 'Dancing Script', cursive; */
+    font-family: 'Varela Round', sans-serif;
+}
+.container .right-box .resume .skills .box ul {
+    width: 100%;
+    border: 2px solid;
+    border-radius: 9px;
+    padding: 3px;
+    font-size: large;
+    list-style: inside;
+    margin: 12px 0px;
+}
+
+
+/* .messageMe */
+.container  .right-box .messageMe {
+    width: 98%;
+    /* border: 1px solid; */
+    height: 99vh;
+}
+
+.container .right-box .messageMe{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    font-weight: bold;
+    /* font-family: 'Comfortaa', cursive; */
+    /* font-family: 'Dancing Script', cursive; */
+    font-family: 'Varela Round', sans-serif;
+}
+.container .right-box .messageMe .box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 12px;
+}
+.container .right-box .messageMe .box .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
+}
+.container .right-box .messageMe .box .content h3{
+    margin: 9px 0px;
+    text-decoration: underline;
+}
+/* .messageMe .box .content p{
+    margin-bottom: 8px;
+    line-height: 39px;
+} */
+.container .right-box .messageMe .box .form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 12px;
+}
+.container .right-box .messageMe .box .form input {
+    background: transparent;
+    width: 100%;
+    border: 1px solid red;
+    border-radius: 9px;
+    padding: 3px;
+    border-right: none;
+    border-left: none;
+    margin: 9px 0px;
+    color: whitesmoke;
+}
+.container .right-box .messageMe .box .form textarea{
+    background: transparent;
+    width: 90%;
+    border: 1px solid red;
+    border-radius: 9px;
+    padding: 3px;
+    border-right: none;
+    border-left: none;
+    margin: 9px 0px;
+    color: whitesmoke;
+}
+.container .right-box .messageMe .box  .form .button{
+    background: transparent;
+    /* width: 100%; */
+    border: 1px solid #951599;
+    border-radius: 9px;
+    padding: 3px;
+    border-right: none;
+    border-left: none;
+    margin: 9px 0px;
+    cursor: pointer;
+    font-size: large;
+}
+.container .right-box .messageMe .box  .form .button:hover {
+    font-size: medium;
+}
+/* .container .right-box .messageMe .box .form .button button{
+    padding: 4px;
+    border: none;
+    background: #9e9e9e91;
+    border-radius: 8px;
+    font-size: 21px;
+    font-weight: bold;
+    font-family: auto;
+    margin-left: 6px;
+} */
+
+/*width*/
+::-webkit-scrollbar{
+    width: 3px;
+}
+/*track*/
+::-webkit-scrollbar-track{
+    border-radius: 9px;
+}
+/*handle*/
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(transparent,rgb(255,11,222));
+    border-radius: 9px;
+}
+/*handle on hover*/
+::-webkit-scrollbar-thumb:hover{
+    background: #951599;
+}
+
+/* responsive */
+@media screen and (max-width:1297px) {
+    .container .left-box .imgbox {
+        border: 3px solid darkslateblue;
+        border-radius: 9px 9px 9px 47px;
+    }
+    .container .left-box .imgbox img {
+        width: 79px;
+    }
+    .container .left-box .next-pages-buttons ul li button a {
+        font-size: medium;
+    }
+    .container .left-box .next-pages-buttons ul li ul li {
+        margin: 0px 7px;
+        cursor: pointer;
+    }   
+}
+@media screen  and (max-width: 820px) {
+    .container .left-box .next-pages-buttons {
+        display: none;
+    }
+    .container  .right-box .projectsContaints .project .subtitle {
+        font-size: small;
+    }
+}
+@media screen  and (max-width: 560px) {
+    .container  .right-box .projectsContaints .project .subtitle {
+        font-size: xx-small;
+    }
+    .container .right-box .resume {
+        font-size: small;
+    }
+    .container .right-box .messageMe {
+        font-size: small;
+    }
+}
+@media screen  and (max-width: 429px) {
+    .container  .right-box .projectsContaints .project .subtitle {
+        display: none;
+    }
+    .container .right-box .resume {
+        font-size: small;
+    }
+    .container .right-box .resume .exprience-contant {
+       font-size: xx-small;
+    }
+    .container .right-box .messageMe {
+        font-size: small;
+    }
+    .container .right-box .messageMe .box .content{
+        font-size: xx-small;
+    }
+}
